@@ -976,6 +976,7 @@ pre {
   border-width: 0.25rem;
   border-radius: 0.1875rem;
   border-color: #324273;
+  /* maybe 전체 배경(?) 색 설정 부분 080808 -> 324273*/
 }
 
 .blog-post blockquote {
