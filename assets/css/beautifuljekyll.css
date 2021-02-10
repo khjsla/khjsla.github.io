@@ -5,6 +5,8 @@ layout: null
 @import url("pygment_highlights.css");
 
 /* --- General --- */
+/* maybe 전체 배경(?) 색 설정 부분 808080 -> 324273*/
+
 
 html {
   font-size: 100%
@@ -53,7 +55,7 @@ a:focus {
   color: {{ site.hover-col | default: "#0085A1" }};
 }
 blockquote {
-  color: #808080;
+  color: #324273;
   font-style: italic;
 }
 blockquote p:first-child {
@@ -465,7 +467,7 @@ footer .footer-custom-content {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #808080;
+  color: #324273;
   font-size: 1.125rem;
   font-style: italic;
   margin: 0 0 0.625rem;
@@ -601,7 +603,7 @@ footer .footer-custom-content {
 }
 
 #full-tags-list .tag-entry .entry-date {
-  color: #808080;
+  color: #324273;
   font-style: italic;
   font-size: 1rem;
 }
@@ -976,7 +978,6 @@ pre {
   border-width: 0.25rem;
   border-radius: 0.1875rem;
   border-color: #324273;
-  /* maybe 전체 배경(?) 색 설정 부분 080808 -> 324273*/
 }
 
 .blog-post blockquote {
