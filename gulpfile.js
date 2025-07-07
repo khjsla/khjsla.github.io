@@ -5,8 +5,9 @@ const sass = require('gulp-sass');
 const wait = require('gulp-wait');
 const babel = require('gulp-babel');;
 const rename = require('gulp-rename');
+var browserSync = require('browser-sync').create();
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
     return gulp.src('./js/scripts.js')
         .pipe(plumber(plumber({
             errorHandler: function (err) {
@@ -15,25 +16,32 @@ gulp.task('scripts', function() {
             }
         })))
         .pipe(babel({
-          presets: [['@babel/env', {modules:false}]]
+            presets: [['@babel/env', { modules: false }]]
         }))
         .pipe(uglify({
             output: {
                 comments: '/^!/'
             }
         }))
-        .pipe(rename({extname: '.min.js'}))
+        .pipe(rename({ extname: '.min.js' }))
         .pipe(gulp.dest('./js'));
 });
 
 gulp.task('styles', function () {
     return gulp.src('./scss/styles.scss')
         .pipe(wait(250))
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
+    browserSync.init({
+        server: {
+            baseDir: './'  // index.html 위치
+        },
+        port: 3000       // 원하는 포트 설정
+    });
+
     gulp.watch('./js/scripts.js', gulp.series('scripts'));
     gulp.watch('./scss/styles.scss', gulp.series('styles'));
 });

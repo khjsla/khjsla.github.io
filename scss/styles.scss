@@ -657,8 +657,10 @@ footer {
 .project-info {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // transform: translateY(-50%);
+    margin-left: 150px;
     padding: 15px;
 
     h3 {
@@ -690,12 +692,30 @@ footer {
 
 /*
     -------------------------------
-    ----- 9. Skills Styles -----
+    ----- 9. Awards Styles -----
+    -------------------------------
+*/
+
+#awards {
+    padding: 50px 15px 20px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
+}
+
+/*
+    -------------------------------
+    ----- 10. Skills Styles -----
     -------------------------------
 */
 
 #skills {
     padding: 50px 15px;
+    border-bottom: 1px solid $border;
     text-align: center;
 
     h2 {
@@ -715,7 +735,7 @@ footer {
         margin: 7px;
         padding: 5px 10px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        background: lighten($background-alt,4%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
@@ -724,7 +744,7 @@ footer {
 
 /*
     -------------------------------
-    ----- 10. Contact Styles -----
+    ----- 11. Contact Styles -----
     -------------------------------
 */
 
@@ -789,7 +809,7 @@ footer {
 
 /*
     ---------------------------------------
-    ----- 11. Optional Section Styles -----
+    ----- 12. Optional Section Styles -----
     ---------------------------------------
 */
 
@@ -837,7 +857,7 @@ footer {
 
 /*
     -----------------------------
-    ----- 12. Media Queries -----
+    ----- 13. Media Queries -----
     -----------------------------
 */
 
