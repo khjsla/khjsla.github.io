@@ -449,6 +449,10 @@ footer {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
 
+    div {
+        text-align: center; // 중앙 정렬
+    }
+
     h2 {
         color: $heading;
     }
@@ -456,6 +460,7 @@ footer {
     p {
         color: $text;
         margin: 0;
+        text-align: left; // 중앙 정렬
     }
 }
 
