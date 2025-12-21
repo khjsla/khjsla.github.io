@@ -12,6 +12,65 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+        #portfolio-pdfs {
+            padding: 50px 15px;
+            border-bottom: 1px solid #dcd9d9;
+            text-align: center;
+        }
+        .pdf-viewer-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            border: 1px solid #dcd9d9;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            margin-bottom: 15px;
+        }
+        .pdf-viewer-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .pdf-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            display: inline-block;
+            transition: 0.3s ease all;
+            margin: 5px;
+        }
+        .pdf-link:hover {
+            color: #fff;
+            background: #3498db;
+            text-decoration: none;
+        }
+        .pdf-title {
+            color: #374054;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+        @media only screen and (max-width: 768px) {
+            .pdf-viewer-container {
+                height: 400px;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .pdf-viewer-container {
+                height: 300px;
+            }
+            .pdf-link {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -91,6 +150,51 @@
         </div>
     </div>
     <!-- End #about -->
+
+    <div id="portfolio-pdfs" class="background-alt">
+        <div class="container">
+            <h2 class="heading">Portfolio</h2>
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <h3 class="pdf-title">Resume 😀</h3>
+                    <div class="pdf-viewer-container">
+                        <iframe 
+                            src="files/2025_강현지_이력서.pdf" 
+                            type="application/pdf"
+                            title="포트폴리오 PDF 1">
+                        </iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="files/2025_강현지_이력서.pdf" download class="pdf-link">
+                            <i class="fa fa-download" aria-hidden="true"></i> PDF 다운로드
+                        </a>
+                        <a href="files/2025_강현지_이력서.pdf" target="_blank" class="pdf-link">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> 새 창에서 보기
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <h3 class="pdf-title">Portfolio 😃</h3>
+                    <div class="pdf-viewer-container">
+                        <iframe 
+                            src="files/2025_강현지_포트폴리오_vF.pdf" 
+                            type="application/pdf"
+                            title="포트폴리오 PDF 2">
+                        </iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="files/2025_강현지_포트폴리오_vF.pdf" download class="pdf-link">
+                            <i class="fa fa-download" aria-hidden="true"></i> PDF 다운로드
+                        </a>
+                        <a href="files/2025_강현지_포트폴리오_vF.pdf" target="_blank" class="pdf-link">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> 새 창에서 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #portfolio-pdfs -->
 
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>

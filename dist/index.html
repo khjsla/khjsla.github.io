@@ -12,6 +12,65 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+        #portfolio-pdfs {
+            padding: 50px 15px;
+            border-bottom: 1px solid #dcd9d9;
+            text-align: center;
+        }
+        .pdf-viewer-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            border: 1px solid #dcd9d9;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            margin-bottom: 15px;
+        }
+        .pdf-viewer-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .pdf-link {
+            color: #3498db;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            display: inline-block;
+            transition: 0.3s ease all;
+            margin: 5px;
+        }
+        .pdf-link:hover {
+            color: #fff;
+            background: #3498db;
+            text-decoration: none;
+        }
+        .pdf-title {
+            color: #374054;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+        @media only screen and (max-width: 768px) {
+            .pdf-viewer-container {
+                height: 400px;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .pdf-viewer-container {
+                height: 300px;
+            }
+            .pdf-link {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -75,19 +134,16 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        저는 ‘재밌어서 잘하고, 잘해서 더 재밌는’ 개발을 하고 싶습니다
+                        저는 한번 시작하면 끝을 봐야 직성이 풀리는 성향을 지니고 있습니다.
                     </p>
                     <p>
-                        한번 꽂히면 끝을 봐야 직성이 풀리는 성향 덕분에, 개발에 몰입하는 시간이 저에게는 가장 즐겁고 창의적인 순간입니다.
+                        개발에 몰입하는 시간이 저에게는 가장 즐겁고 창의적인 순간입니다.
                     </p>
                     <p>
-                        새로운 기술이나 구조를 빠르게 습득하고, 복잡한 문제를 정리해 단순한 구조로 바꾸는 걸 좋아합니다.
+                        성장하는 것을 즐기며, 새로운 기술을 빠르게 습득하고 구조를 단순하게 바꾸는 걸 좋아합니다.
                     </p>
                     <p>
-                        단순히 코드를 짜는 것이 아니라, 왜 이 구조여야 하는지 어떻게 하면 더 나은 API나 서비스가 될 수 있을지를 고민합니다.
-                    </p>
-                    <p>
-                        불가능한 것 빼고 모두 개발 가능한 Software Engineer 입니다.
+                        단순 수행을 위한 코드를 짜는 것이 아니라, 왜 이래야 하는지. 어떻게 하면 더 나은 서비스가 될 수 있을지를 고민합니다.
                     </p>
                 </div>
             </div>
@@ -95,13 +151,58 @@
     </div>
     <!-- End #about -->
 
+    <div id="portfolio-pdfs" class="background-alt">
+        <div class="container">
+            <h2 class="heading">Portfolio</h2>
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <h3 class="pdf-title">Resume 😀</h3>
+                    <div class="pdf-viewer-container">
+                        <iframe 
+                            src="files/2025_강현지_이력서.pdf" 
+                            type="application/pdf"
+                            title="포트폴리오 PDF 1">
+                        </iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="files/2025_강현지_이력서.pdf" download class="pdf-link">
+                            <i class="fa fa-download" aria-hidden="true"></i> PDF 다운로드
+                        </a>
+                        <a href="files/2025_강현지_이력서.pdf" target="_blank" class="pdf-link">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> 새 창에서 보기
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <h3 class="pdf-title">Portfolio 😃</h3>
+                    <div class="pdf-viewer-container">
+                        <iframe 
+                            src="files/2025_강현지_포트폴리오_vF.pdf" 
+                            type="application/pdf"
+                            title="포트폴리오 PDF 2">
+                        </iframe>
+                    </div>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="files/2025_강현지_포트폴리오_vF.pdf" download class="pdf-link">
+                            <i class="fa fa-download" aria-hidden="true"></i> PDF 다운로드
+                        </a>
+                        <a href="files/2025_강현지_포트폴리오_vF.pdf" target="_blank" class="pdf-link">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> 새 창에서 보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #portfolio-pdfs -->
+
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
             <div data-date="2025.06 ~ 현재">
                 <h3>KB 손해보험</h3>
                 <h4>플랫폼 운영부</h4>
-                <h5>[ ML engineer ]</h5>
+                <h5>[ AI engineer ]</h5>
                 <p>
                     GenAI 를 활용한 플랫폼 운영 기획/운영/개발업무 진행
                 </p>
@@ -109,17 +210,23 @@
                     GenAI 기반 Platform 을 활용하여 KB 손해보험 Web/App 의 기획/운영/개발
                 </p>
                 <p>
-                    온프레미스 DB2 환경 기반 DB 품질 개선 프로젝트 진행
+                    Feature Store 구축을 위한 온프레미스 DB2 환경 기반 DB 품질 개선 프로젝트 진행
                 </p>
                 <p>
-                    - 중복 필드 및 비정상 레코드(dummy data) 식별을 위한 데이터 프로파일링 수행
+
+                </p>
+                <p>
+                    - 중복 필드 및 Noise Data 식별을 위한 데이터 프로파일링 수행
                 </p>
                 <p>
                     - 비즈니스 시나리오 기반의 고객 행동 로그 중심으로 주요 테이블 스키마 정비 및 데이터 정합성 확보
                 </p>
                 <p>
-                    - 후속 분석 및 AI 모델 학습용 데이터셋의 정합성과 활용도를 대폭 개선
+                    - 후속 분석 및 AI 모델 학습용 데이터셋의 정합성 개선을 위한 작업 수행
                 </p>
+                <h6>
+                    Python
+                </h6>
             </div>
 
             <div data-date="2021.12 ~ 2025.06">
@@ -133,11 +240,11 @@
                     - Data Analyst 들이 플랫폼 GUI를 통해 쉽게 Feature 를 생성하고, 관리할 수 있는 기능들의 API 를 FastAPI + SQLAlchemy + Pydantic 기반으로 개발.
                 </p>
                 <p>
-                    - Managed Workflows for Apache Airflow(MWAA)와 AWS Athena(Glue Data Catalog 연동)를 기반으로 머신러닝 파이프라인을 구성.
+                    - 통계학자, Data Scientist 들이 플랫폼 GUI를 통해 쉽게 예측 모델을 생성하고, 모델의 성능을 측정, 성능이 낮아진 모델을 리모델링 및 Drift Detection
+                    등을 할 수 있는 기능들의 API를 FastAPI + SQLAlchemy + Pydantic 기반으로 개발.
                 </p>
                 <p>
-                    - 통계학자, Data Scientist 들이 플랫폼 GUI를 통해 쉽게 예측 모델을 생성하고, 모델의 성능을 측정, 성능이 낮아진 모델을 리모델링 및 Drift Detection
-                    등을 할 수 있는 기능들의 API를 개발.
+                    - Managed Workflows for Apache Airflow(MWAA)와 AWS Athena(Glue Data Catalog 연동) 및 AWS SageMaker를 기반으로 머신러닝 파이프라인을 구성.
                 </p>
                 <p>
                     - 천만이 넘는 고객 대상 대규모 feature를 생성하는 파이프라인을 일/월배치로 분리하여 추출 및 관리하였으며,
@@ -147,6 +254,12 @@
                 </p>
                 <p>
                     - unittest 기반 전체 API 의 TestCode 작성 (Coverage 90%)
+                </p>
+                <p>
+                    - Data Scientist로부터 제공된 DataSet 기반으로 머신러닝 모델 학습·추론 로직에 대한 TestCode 작성 
+                </p>
+                <p>
+                    - CI/CD Pipeline 에 탑재하기 위해Testcontainer 를 사용한 docker Image 통해 TestCode 수행 가능한 독립 환경 구성
                 </p>
                 <h6>
                     AWS, SageMaker, Airflow, MWAA, Athena, FastAPI, Pycharm
@@ -201,7 +314,7 @@
     <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
-            <h3>University of Inha</h3>
+            <h3>Inha University</h3>
             <span class="education-date">2016.03 ~ 2021.08</span>
             <h4>정보통신공학과 학사</h4>
             <ul>
